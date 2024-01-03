@@ -86,12 +86,12 @@ jar.manifest {
 }
 
 task sourceJar( type: Jar ) {
-    classifier = "sources"
+    archiveClassifier = "sources"
     from sourceSets.main.allSource
 }
 
 task javadocJar (type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    archiveClassifier = 'javadoc'
     from new File(project.buildDir, 'docs/javadoc')
 }
 
